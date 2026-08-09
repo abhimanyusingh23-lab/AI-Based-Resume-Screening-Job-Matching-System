@@ -8,16 +8,26 @@ ResumeAI is an AI-powered resume analysis web application that compares a candid
 Try ResumeAI Live https://ai-resume-analyzer-inky-one.vercel.app/
 
 📸 Screenshots
+
+
 <img width="1422" height="910" alt="upload-screen" src="https://github.com/user-attachments/assets/c1cd5e07-6a1a-47c8-be63-66d0c2f8adf3" />
+
+<img width="1448" height="900" alt="analysis-screen" src="https://github.com/user-attachments/assets/e5ca6dcc-f871-4fc7-8e37-a069e582221f" />
+
+<img width="1451" height="909" alt="results-screen" src="https://github.com/user-attachments/assets/0d781024-f418-4757-b91a-776e7d666b74" />
+
+<img width="1452" height="900" alt="results-screen1" src="https://github.com/user-attachments/assets/b3f60b57-0269-426f-adca-2420195c7d0d" />
+
+<img width="1453" height="874" alt="results-screen2" src="https://github.com/user-attachments/assets/ce963096-0bd2-47c1-adce-5df3bda6f9db" />
+
+<img width="1446" height="793" alt="dashboard-screen" src="https://github.com/user-attachments/assets/230b479d-7cd1-4666-8f5c-a427053b623f" />
+
 
 The application extracts text from uploaded PDF resumes, analyzes the resume using Google Gemini AI, calculates a resume match score, identifies matching and missing skills, and saves analysis results in PostgreSQL.
 
 
 
-
-
 ✨ **Features**
-
 
 
 &#x20;📄 Upload PDF resumes
@@ -48,12 +58,7 @@ The application extracts text from uploaded PDF resumes, analyzes the resume usi
 
 
 
-
-
-
-
 🖥️ **Application Flow**
-
 
 
 &#x20;  Text
@@ -90,17 +95,9 @@ Results Dashboard
 
 
 
-
-
-
-
 **Tech Stack**
 
-
-
 **Frontend**
-
-
 
 * React
 * JavaScript
@@ -108,11 +105,7 @@ Results Dashboard
 * Axios
 * Vite
 
-
-
 **Backend**
-
-
 
 * Node.js
 * Express.js
@@ -120,91 +113,48 @@ Results Dashboard
 * pdf-parse
 
 
-
-
-
 **AI**
-
-
 
 * Google Gemini API
 * Gemini 3.6 Flash
 
-
-
-
-
 **Database**
-
-
 
 * PostgreSQL
 
 
-
-
-
 **Analysis Results**
-
-
 
 ResumeAI provides:
 
 
-
 **Match Score**
-
-
 
 A percentage showing how closely the resume aligns with the target job description.
 
 
-
 **Matching Skills**
-
-
 
 Skills that appear in both the resume and job requirements.
 
-
-
 **Missing Skills**
-
-
 
 Important job requirements that are missing or not clearly demonstrated in the resume.
 
-
-
 **Strengths**
-
-
 
 AI-generated insights based on the candidate's demonstrated experience and skills.
 
-
-
 **AI Suggestions**
-
-
 
 Personalized recommendations for improving the resume for the selected job.
 
-
-
 **Recommended Roles**
-
-
 
 Potential job roles based on the candidate's demonstrated skills and experience.
 
 
-
-
-
 📁 **Project Structure**
-
-
 
 **ai-resume-analyzer/**
 
@@ -245,52 +195,28 @@ Potential job roles based on the candidate's demonstrated skills and experience.
 
 
 
-
-
-
 **⚙️ Installation**
 
-
-
 **1. Clone the repository**
-
-
 
 git clone YOUR\_GITHUB\_REPOSITORY\_URL
 
 cd ai-resume-analyzer
 
 
-
-
-
 **🔧 Backend Setup**
-
-
 
 Open a terminal inside the backend folder:
 
-
-
 cd backend
-
-
 
 **Install dependencies:**
 
-
-
 npm install
-
-
 
 **Create a .env file:**
 
-
-
 GEMINI\_API\_KEY=your\_gemini\_api\_key\_here
-
-
 
 DB\_HOST=localhost
 
@@ -302,99 +228,48 @@ DB\_USER=postgres
 
 DB\_PASSWORD=your\_postgresql\_password\_here
 
-
-
 PORT=5000
-
-
-
-
-
 
 
 **Start the backend:**
 
-
-
 node server.js
 
-
-
 **The backend should run at:**
-
-
 
 http://localhost:5000
 
 
-
-
-
-
-
 **🎨 Frontend Setup**
-
-
 
 **Open another terminal:**
 
-
-
 cd frontend
-
-
 
 **Install dependencies:**
 
-
-
 npm install
-
-
 
 **Start the frontend:**
 
-
-
 npm run dev
 
-
-
 **Open:**
-
-
 
 http://localhost:5173
 
 
-
-
-
-
-
 **🗄️ PostgreSQL Setup**
-
-
 
 **Create a PostgreSQL database named:**
 
-
-
 resume\_ai
-
-
 
 Make sure PostgreSQL is running before starting the backend.
 
-
-
 The application stores completed resume analyses in PostgreSQL.
 
-
-
 **Example analysis data:**
-
-
 
 ID
 
@@ -404,41 +279,22 @@ Match Score
 
 Created At
 
-
-
 **🔐 Environment Variables**
-
-
 
 Never upload your real .env file to GitHub.
 
-
-
 **The project uses:**
-
-
 
 .env
 
-
-
 for private credentials.
 
-
-
 **A safe template is provided as:**
-
-
 
 .env.example
 
 
-
-
-
 **🚀 Future Improvements**
-
-
 
 Resume analysis history dashboard
 
@@ -461,20 +317,11 @@ Cloud deployment
 Analytics dashboard
 
 
-
-
-
 **🎯 Project Goal**
-
-
 
 ResumeAI was built to demonstrate how modern AI technologies can be combined with a full-stack web application to solve a practical career problem.
 
-
-
 The project combines:
-
-
 
 Frontend development
 
