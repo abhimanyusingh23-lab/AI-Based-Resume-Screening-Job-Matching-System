@@ -4,7 +4,8 @@
 
 ResumeAI is an AI-powered resume analysis web application that compares a candidate's resume with a target job description and provides personalized insights.
 
-
+🌐 Live Demo
+Try ResumeAI Live https://ai-resume-analyzer-inky-one.vercel.app/
 
 The application extracts text from uploaded PDF resumes, analyzes the resume using Google Gemini AI, calculates a resume match score, identifies matching and missing skills, and saves analysis results in PostgreSQL.
 
