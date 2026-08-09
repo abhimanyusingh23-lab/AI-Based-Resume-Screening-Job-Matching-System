@@ -175,6 +175,24 @@ Potential job roles based on the candidate's demonstrated skills and experience.
 
 **AI-Resume-Analyzer/**
 
+AI-Resume-Analyzer/
+nnn backend/
+n   nnn server.js
+n   nnn package.json
+n   nnn .env.example
+nnn frontend/
+n   nnn src/
+n   nnn public/
+n   nnn package.json
+n   nnn vite.config.js
+nnn screenshots/
+n   nnn upload-screen.png
+n   nnn analysis-screen.png
+n   nnn results-screen.png
+n   nnn dashboard-screen.png
+nnn .gitignore
+nnn README.md
+
 &#x20;├── backend/
 │   ├── server.js
 │   ├── package.json
