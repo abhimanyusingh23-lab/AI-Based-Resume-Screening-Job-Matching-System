@@ -62,8 +62,7 @@ function App() {
       formData.append("resume", resume);
 
       const uploadResponse = await axios.post(
-        "http://localhost:5000/api/resume/upload",
-        formData
+"https://ai-resume-analyzer-backend-fqrr.onrender.com/api/resume/upload",        formData
       );
 
       const resumeData = uploadResponse.data;
@@ -77,8 +76,7 @@ function App() {
       // --------------------------------
 
       const analysisResponse = await axios.post(
-        "http://localhost:5000/api/resume/analyze",
-        {
+"https://ai-resume-analyzer-backend-fqrr.onrender.com/api/resume/analyze",        {
           resumeText: resumeData.resumeText,
           jobDescription: jobDescription,
         }
