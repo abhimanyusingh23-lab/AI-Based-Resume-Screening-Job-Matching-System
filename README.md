@@ -9,6 +9,8 @@ Try ResumeAI Live https://ai-resume-analyzer-inky-one.vercel.app/
 📸 Screenshots
 
 
+
+
 <img width="1422" height="910" alt="upload-screen" src="https://github.com/user-attachments/assets/c1cd5e07-6a1a-47c8-be63-66d0c2f8adf3" />
 
 <img width="1448" height="900" alt="analysis-screen" src="https://github.com/user-attachments/assets/e5ca6dcc-f871-4fc7-8e37-a069e582221f" />
@@ -20,6 +22,8 @@ Try ResumeAI Live https://ai-resume-analyzer-inky-one.vercel.app/
 <img width="1453" height="874" alt="results-screen2" src="https://github.com/user-attachments/assets/ce963096-0bd2-47c1-adce-5df3bda6f9db" />
 
 <img width="1446" height="793" alt="dashboard-screen" src="https://github.com/user-attachments/assets/230b479d-7cd1-4666-8f5c-a427053b623f" />
+
+
 
 
 The application extracts text from uploaded PDF resumes, analyzes the resume using Google Gemini AI, calculates a resume match score, identifies matching and missing skills, and saves analysis results in PostgreSQL.
