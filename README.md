@@ -175,40 +175,23 @@ Potential job roles based on the candidate's demonstrated skills and experience.
 
 **AI-Resume-Analyzer/**
 
-AI-Resume-Analyzer/
-nnn backend/
-n   nnn server.js
-n   nnn package.json
-n   nnn .env.example
-nnn frontend/
-n   nnn src/
-n   nnn public/
-n   nnn package.json
-n   nnn vite.config.js
-nnn screenshots/
-n   nnn upload-screen.png
-n   nnn analysis-screen.png
-n   nnn results-screen.png
-n   nnn dashboard-screen.png
-nnn .gitignore
-nnn README.md
 
-&#x20;├── backend/
+├── backend/
 │   ├── server.js
 │   ├── package.json
 │   └── .env.example
-&#x20;├── frontend/
+├── frontend/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
 │   └── vite.config.js
-&#x20;├── screenshots/
+├── screenshots/
 │   ├── upload-screen.png
 │   ├── analysis-screen.png
 │   ├── results-screen.png
 │   └── dashboard-screen.png
-&#x20;├── .gitignore
-&#x20;└── README.md
+├── .gitignore
+└── README.md
 
 
 **⚙️ Installation**
@@ -226,7 +209,9 @@ npm install
 
 **Create a `.env` file inside the `backend` folder:**
 GEMINI_API_KEY=your_gemini_api_key
+
 DATABASE_URL=your_postgresql_connection_string
+
 PORT=5000
 **Start the backend:**
 node server.js
