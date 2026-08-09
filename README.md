@@ -177,20 +177,35 @@ Potential job roles based on the candidate's demonstrated skills and experience.
 
 
 ├── backend/
+
 │   ├── server.js
+
 │   ├── package.json
+
 │   └── .env.example
+
 ├── frontend/
+
 │   ├── src/
+
 │   ├── public/
+
 │   ├── package.json
+
 │   └── vite.config.js
+
 ├── screenshots/
+
 │   ├── upload-screen.png
+
 │   ├── analysis-screen.png
+
 │   ├── results-screen.png
+
 │   └── dashboard-screen.png
+
 ├── .gitignore
+
 └── README.md
 
 
@@ -199,23 +214,32 @@ Potential job roles based on the candidate's demonstrated skills and experience.
 **1. Clone the repository**
 
 git clone https://github.com/priyaskale/AI-Resume-Analyzer.git
+
 cd AI-Resume-Analyzer
 
 
 **Backend Setup**
 
 cd backend
+
 npm install
 
 **Create a `.env` file inside the `backend` folder:**
+
 GEMINI_API_KEY=your_gemini_api_key
 
 DATABASE_URL=your_postgresql_connection_string
 
 PORT=5000
+
+
 **Start the backend:**
+
 node server.js
+
+
 **Backend:**
+
 http://localhost:5000
 
 **Frontend Setup**
@@ -223,10 +247,13 @@ http://localhost:5000
 **Open another terminal:**
 
 cd frontend
+
 npm install
+
 npm run dev
 
 **Frontend:**
+
 http://localhost:5173
 
 
@@ -237,7 +264,9 @@ Sensitive credentials are stored using environment variables.
 **Required backend variables:**
 
 GEMINI_API_KEY=your_gemini_api_key
+
 DATABASE_URL=your_postgresql_connection_string
+
 PORT=5000
 
 **A safe environment variable template is provided as:**
@@ -248,7 +277,9 @@ backend/.env.example
 **🚀 Deployment**
 
   - **Frontend:** Vercel
+    
   - **Backend:** Render
+    
   - **Database:** Neon PostgreSQL
 
 The production frontend communicates with the deployed backend through the Render API.
