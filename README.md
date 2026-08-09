@@ -1,7 +1,6 @@
 🤖 **ResumeAI — AI Resume Analyzer**
 
 
-
 ResumeAI is an AI-powered resume analysis web application that compares a candidate's resume with a target job description and provides personalized insights.
 
 🌐 Live Demo
@@ -36,7 +35,7 @@ The application extracts text from uploaded PDF resumes, analyzes the resume usi
 
 &#x20;🤖 AI-powered resume analysis using Google Gemini
 
-&#x20;🎯 Resume-to-job match score
+&#x20;🎯 Resume match score
 
 &#x20;✅ Matching skills detection
 
@@ -44,7 +43,7 @@ The application extracts text from uploaded PDF resumes, analyzes the resume usi
 
 &#x20;💪 Resume strengths analysis
 
-&#x20;💡 Personalized AI improvement suggestions
+&#x20;💡 Personalized resume improvement suggestions
 
 &#x20;💼 Recommended job roles
 
@@ -56,6 +55,53 @@ The application extracts text from uploaded PDF resumes, analyzes the resume usi
 
 &#x20;🔒 Environment variables for API credentials
 
+
+
+**Tech Stack**
+
+**Frontend**
+
+* React
+* JavaScript
+* CSS
+* Axios
+* Vite
+
+**Backend**
+
+* Node.js
+* Express.js
+* Multer
+* pdf-parse
+
+
+**AI**
+
+* Google Gemini API
+* Gemini 3.6 Flash
+
+**Database**
+
+* PostgreSQL
+* Neon
+
+**Deployment**
+
+* Vercel — Frontend
+* Render — Backend
+* Neon — Database
+
+**How It Works**
+
+1. Upload your resume as a PDF.
+2. The application extracts the resume text.
+3. Enter the target job description.
+4. Gemini AI analyzes the resume against the job requirements.
+5. The application generates a resume match score.
+6. Matching and missing skills are identified.
+7. Resume strengths are analyzed.
+8. Personalized suggestions and recommended roles are generated.
+9. The analysis results are stored in PostgreSQL.
 
 
 🖥️ **Application Flow**
@@ -95,34 +141,6 @@ Results Dashboard
 
 
 
-**Tech Stack**
-
-**Frontend**
-
-* React
-* JavaScript
-* CSS
-* Axios
-* Vite
-
-**Backend**
-
-* Node.js
-* Express.js
-* Multer
-* pdf-parse
-
-
-**AI**
-
-* Google Gemini API
-* Gemini 3.6 Flash
-
-**Database**
-
-* PostgreSQL
-
-
 **Analysis Results**
 
 ResumeAI provides:
@@ -130,20 +148,19 @@ ResumeAI provides:
 
 **Match Score**
 
-A percentage showing how closely the resume aligns with the target job description.
-
+Percentage showing how closely the resume aligns with the target job description.
 
 **Matching Skills**
 
-Skills that appear in both the resume and job requirements.
+Skills found in both the resume and job requirements.
 
 **Missing Skills**
 
-Important job requirements that are missing or not clearly demonstrated in the resume.
+Important job requirements missing or not clearly demonstrated in the resume.
 
 **Strengths**
 
-AI-generated insights based on the candidate's demonstrated experience and skills.
+AI-generated insights based on the candidate's demonstrated skills and experience.
 
 **AI Suggestions**
 
@@ -156,182 +173,87 @@ Potential job roles based on the candidate's demonstrated skills and experience.
 
 📁 **Project Structure**
 
-**ai-resume-analyzer/**
+**AI-Resume-Analyzer/**
 
-│
-
-├── **backend/**
-
+├── backend/
 │   ├── server.js
-
 │   ├── package.json
-
-│   ├── .env.example
-
-│   └── ...
-
-│
-
-├── **frontend/**
-
+│   └── .env.example
+├── frontend/
 │   ├── src/
-
-│   │   ├── App.jsx
-
-│   │   ├── App.css
-
-│   │   └── ...
-
+│   ├── public/
 │   ├── package.json
-
-│   └── ...
-
-│
-
+│   └── vite.config.js
+├── screenshots/
+│   ├── upload-screen.png
+│   ├── analysis-screen.png
+│   ├── results-screen.png
+│   └── dashboard-screen.png
 ├── .gitignore
-
 └── README.md
-
-
 
 
 **⚙️ Installation**
 
 **1. Clone the repository**
 
-git clone YOUR\_GITHUB\_REPOSITORY\_URL
+git clone https://github.com/priyaskale/AI-Resume-Analyzer.git
+cd AI-Resume-Analyzer
 
-cd ai-resume-analyzer
 
-
-**🔧 Backend Setup**
-
-Open a terminal inside the backend folder:
+**Backend Setup**
 
 cd backend
-
-**Install dependencies:**
-
 npm install
 
-**Create a .env file:**
-
-GEMINI\_API\_KEY=your\_gemini\_api\_key\_here
-
-DB\_HOST=localhost
-
-DB\_PORT=5432
-
-DB\_NAME=resume\_ai
-
-DB\_USER=postgres
-
-DB\_PASSWORD=your\_postgresql\_password\_here
-
+**Create a `.env` file inside the `backend` folder:**
+GEMINI_API_KEY=your_gemini_api_key
+DATABASE_URL=your_postgresql_connection_string
 PORT=5000
-
-
 **Start the backend:**
-
 node server.js
-
-**The backend should run at:**
-
+**Backend:**
 http://localhost:5000
 
-
-**🎨 Frontend Setup**
+**Frontend Setup**
 
 **Open another terminal:**
 
 cd frontend
-
-**Install dependencies:**
-
 npm install
-
-**Start the frontend:**
-
 npm run dev
 
-**Open:**
-
+**Frontend:**
 http://localhost:5173
 
 
-**🗄️ PostgreSQL Setup**
-
-**Create a PostgreSQL database named:**
-
-resume\_ai
-
-Make sure PostgreSQL is running before starting the backend.
-
-The application stores completed resume analyses in PostgreSQL.
-
-**Example analysis data:**
-
-ID
-
-File Name
-
-Match Score
-
-Created At
-
 **🔐 Environment Variables**
 
-Never upload your real .env file to GitHub.
+Sensitive credentials are stored using environment variables.
 
-**The project uses:**
+**Required backend variables:**
 
-.env
+GEMINI_API_KEY=your_gemini_api_key
+DATABASE_URL=your_postgresql_connection_string
+PORT=5000
 
-for private credentials.
+**A safe environment variable template is provided as:**
 
-**A safe template is provided as:**
-
-.env.example
+backend/.env.example
 
 
-**🚀 Future Improvements**
+**🚀 Deployment**
 
-Resume analysis history dashboard
+  - **Frontend:** Vercel
+  - **Backend:** Render
+  - **Database:** Neon PostgreSQL
 
-User authentication
-
-Resume improvement suggestions with rewritten sections
-
-ATS score analysis
-
-Keyword optimization
-
-Resume PDF report generation
-
-Job search integration
-
-Multiple resume comparison
-
-Cloud deployment
-
-Analytics dashboard
+The production frontend communicates with the deployed backend through the Render API.
 
 
 **🎯 Project Goal**
 
-ResumeAI was built to demonstrate how modern AI technologies can be combined with a full-stack web application to solve a practical career problem.
+ResumeAI was built to demonstrate how AI, full-stack development, PDF processing, and database technologies can be combined to solve a practical career-related problem.
 
-The project combines:
 
-Frontend development
-
-Backend API development
-
-AI integration
-
-PDF processing
-
-Database management
-
-Responsive UI design
 
