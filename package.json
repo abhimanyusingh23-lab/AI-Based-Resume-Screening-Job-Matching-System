@@ -1,0 +1,11 @@
+{
+  "name": "ai-resume-analyzer",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names backend,frontend --prefix-colors blue,green \"npm --prefix backend run start\" \"npm --prefix frontend run dev\"",
+    "install:all": "npm --prefix backend ci && npm --prefix frontend ci"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

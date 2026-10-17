@@ -1,297 +1,176 @@
-🤖 **ResumeAI — AI Resume Analyzer**
+# AI-Based Resume Screening & Job Matching System
 
+A local web application that compares a PDF resume with a job description. It combines NLP relevance signals with Gemini's contextual evaluation to produce role-specific strengths, gaps, suggestions, and a match score.
 
-ResumeAI is an AI-powered resume analysis web application that compares a candidate's resume with a target job description and provides personalized insights.
+## What it does
 
-🌐 Live Demo
-Try ResumeAI Live https://ai-resume-analyzer-inky-one.vercel.app/
+- Uploads a PDF resume and extracts its text.
+- Uses NLP tokenization, stemming, term overlap, and cosine similarity as relevance signals.
+- Uses Gemini to evaluate the resume in the context of the supplied role.
+- Rejects documents that are clearly not resumes instead of scoring arbitrary PDFs as candidates.
+- Only shows strengths supported by evidence in the resume and relevant to the job description.
+- Saves analyses to PostgreSQL and keeps the original uploaded PDF for new history entries.
+- Lets you view, select, and delete saved history records.
 
-📸 Screenshots
+The score is an assistive signal, not an automated hiring decision.
 
+## Tech stack
 
+| Area | Technology |
+| --- | --- |
+| Frontend | React, Vite |
+| Backend | Node.js, Express |
+| Database | PostgreSQL |
+| Resume parsing | pdf-parse |
+| NLP signals | Natural |
+| AI evaluation | Google Gemini API |
 
+## Requirements
 
-<img width="1422" height="910" alt="upload-screen" src="https://github.com/user-attachments/assets/c1cd5e07-6a1a-47c8-be63-66d0c2f8adf3" />
+Install these before starting:
 
-<img width="1448" height="900" alt="analysis-screen" src="https://github.com/user-attachments/assets/e5ca6dcc-f871-4fc7-8e37-a069e582221f" />
+1. Node.js 20 or later
+2. PostgreSQL 15 or later, running locally
+3. A Gemini API key from Google AI Studio
 
-<img width="1451" height="909" alt="results-screen" src="https://github.com/user-attachments/assets/0d781024-f418-4757-b91a-776e7d666b74" />
+## Quick start
 
-<img width="1452" height="900" alt="results-screen1" src="https://github.com/user-attachments/assets/b3f60b57-0269-426f-adca-2420195c7d0d" />
+### 1. Clone the repository
 
-<img width="1453" height="874" alt="results-screen2" src="https://github.com/user-attachments/assets/ce963096-0bd2-47c1-adce-5df3bda6f9db" />
+~~~
+git clone https://github.com/abhimanyusingh23-lab/AI-Based-Resume-Screening-Job-Matching-System.git
+cd AI-Based-Resume-Screening-Job-Matching-System
+~~~
 
-<img width="1446" height="793" alt="dashboard-screen" src="https://github.com/user-attachments/assets/230b479d-7cd1-4666-8f5c-a427053b623f" />
+### 2. Install dependencies
 
+From the project root, run:
 
-
-
-The application extracts text from uploaded PDF resumes, analyzes the resume using Google Gemini AI, calculates a resume match score, identifies matching and missing skills, and saves analysis results in PostgreSQL.
-
-
-
-✨ **Features**
-
-
-&#x20;📄 Upload PDF resumes
-
-&#x20;📝 Enter a target job description
-
-&#x20;🤖 AI-powered resume analysis using Google Gemini
-
-&#x20;🎯 Resume match score
-
-&#x20;✅ Matching skills detection
-
-&#x20;⚠️ Missing skills identification
-
-&#x20;💪 Resume strengths analysis
-
-&#x20;💡 Personalized resume improvement suggestions
-
-&#x20;💼 Recommended job roles
-
-&#x20;🗄️ PostgreSQL analysis history
-
-&#x20;🔄 Analyze multiple resumes
-
-&#x20;📱 Responsive UI for desktop and mobile
-
-&#x20;🔒 Environment variables for API credentials
-
-
-
-**Tech Stack**
-
-**Frontend**
-
-* React
-* JavaScript
-* CSS
-* Axios
-* Vite
-
-**Backend**
-
-* Node.js
-* Express.js
-* Multer
-* pdf-parse
-
-
-**AI**
-
-* Google Gemini API
-* Gemini 3.6 Flash
-
-**Database**
-
-* PostgreSQL
-* Neon
-
-**Deployment**
-
-* Vercel — Frontend
-* Render — Backend
-* Neon — Database
-
-**How It Works**
-
-1. Upload your resume as a PDF.
-2. The application extracts the resume text.
-3. Enter the target job description.
-4. Gemini AI analyzes the resume against the job requirements.
-5. The application generates a resume match score.
-6. Matching and missing skills are identified.
-7. Resume strengths are analyzed.
-8. Personalized suggestions and recommended roles are generated.
-9. The analysis results are stored in PostgreSQL.
-
-
-🖥️ **Application Flow**
-
-
-&#x20;  Text
-
-Resume PDF
-
-&#x20;   ↓
-
-React Frontend
-
-&#x20;   ↓
-
-Node.js + Express API
-
-&#x20;   ↓
-
-PDF Text Extraction
-
-&#x20;   ↓
-
-Google Gemini AI
-
-&#x20;   ↓
-
-Resume Analysis
-
-&#x20;   ↓
-
-PostgreSQL
-
-&#x20;   ↓
-
-Results Dashboard
-
-
-
-**Analysis Results**
-
-ResumeAI provides:
-
-
-**Match Score**
-
-Percentage showing how closely the resume aligns with the target job description.
-
-**Matching Skills**
-
-Skills found in both the resume and job requirements.
-
-**Missing Skills**
-
-Important job requirements missing or not clearly demonstrated in the resume.
-
-**Strengths**
-
-AI-generated insights based on the candidate's demonstrated skills and experience.
-
-**AI Suggestions**
-
-Personalized recommendations for improving the resume for the selected job.
-
-**Recommended Roles**
-
-Potential job roles based on the candidate's demonstrated skills and experience.
-
-
-📁 **Project Structure**
-
-**AI-Resume-Analyzer/**
-
-
-├── backend/
-
-│   ├── server.js
-
-│   ├── package.json
-
-│   └── .env.example
-
-├── frontend/
-
-│   ├── src/
-
-│   ├── public/
-
-│   ├── package.json
-
-│   └── vite.config.js
-
-├── screenshots/
-
-│   ├── upload-screen.png
-
-│   ├── analysis-screen.png
-
-│   ├── results-screen.png
-
-│   └── dashboard-screen.png
-
-├── .gitignore
-
-└── README.md
-
-
-**⚙️ Installation**
-
-**1. Clone the repository**
-
-git clone https://github.com/priyaskale/AI-Resume-Analyzer.git
-
-cd AI-Resume-Analyzer
-
-
-**Backend Setup**
-
-cd backend
-
+~~~
 npm install
+npm run install:all
+~~~
 
-**Create a `.env` file inside the `backend` folder:**
+### 3. Create the PostgreSQL database
 
+Open pgAdmin's Query Tool, or a PostgreSQL terminal, and run:
+
+~~~
+CREATE DATABASE resume_ai;
+~~~
+
+Connect to the new **resume_ai** database, then run:
+
+~~~
+CREATE TABLE analyses (
+  id SERIAL PRIMARY KEY,
+  file_name TEXT NOT NULL,
+  resume_text TEXT NOT NULL,
+  resume_file_url TEXT,
+  job_description TEXT NOT NULL,
+  match_score INTEGER,
+  matching_skills JSONB NOT NULL DEFAULT '[]',
+  missing_skills JSONB NOT NULL DEFAULT '[]',
+  strengths JSONB NOT NULL DEFAULT '[]',
+  suggestions JSONB NOT NULL DEFAULT '[]',
+  recommended_roles JSONB NOT NULL DEFAULT '[]',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+~~~
+
+### 4. Add your environment settings
+
+Copy **backend/.env.example** to a new file named **backend/.env**. Then replace the placeholder values:
+
+~~~
 GEMINI_API_KEY=your_gemini_api_key
-
-DATABASE_URL=your_postgresql_connection_string
-
+GEMINI_MODEL=gemini-3.5-flash-lite
+DATABASE_URL=postgresql://postgres:your_postgres_password@127.0.0.1:5432/resume_ai
+DB_SSL=false
 PORT=5000
+~~~
 
+Notes:
 
-**Start the backend:**
+- Use your own PostgreSQL username and password in **DATABASE_URL**.
+- Keep **DB_SSL=false** for a normal local PostgreSQL installation.
+- Do not commit **backend/.env**. It contains your API key and database password.
 
-node server.js
+### 5. Start the application
 
+Run this single command from the project root:
 
-**Backend:**
-
-http://localhost:5000
-
-**Frontend Setup**
-
-**Open another terminal:**
-
-cd frontend
-
-npm install
-
+~~~
 npm run dev
+~~~
 
-**Frontend:**
+Then open **http://localhost:5173** in your browser.
 
-http://localhost:5173
+The frontend runs on port 5173 and the backend runs on port 5000. Vite is configured to use port 5173 strictly, so it will report a port conflict instead of silently opening another frontend on port 5174.
 
+Stop both services with Ctrl+C in the terminal that started them.
 
-**🔐 Environment Variables**
+## How analysis works
 
-Sensitive credentials are stored using environment variables.
+1. The backend extracts text from the uploaded PDF.
+2. It creates NLP relevance signals from both the resume and the job description.
+3. Gemini determines whether the document is plausibly a resume and evaluates its semantic fit for the requested role.
+4. The backend validates and normalizes the AI response. Matching claims must be backed by resume text, and low-fit results do not receive generic strengths.
+5. The result and original PDF reference are saved to PostgreSQL.
 
-**Required backend variables:**
+## Using the app
 
-GEMINI_API_KEY=your_gemini_api_key
+1. Upload a candidate resume as a PDF.
+2. Paste the job description or role requirements.
+3. Select **Generate analysis**.
+4. Review the score, role-relevant matches, gaps, strengths, and recommended next steps.
+5. Open **History** to review the saved PDF and delete one or multiple records.
 
-DATABASE_URL=your_postgresql_connection_string
+Older history records created before PDF storage was added may show extracted text only. New analyses store a viewable copy of the uploaded PDF locally.
 
-PORT=5000
+## Project structure
 
-**A safe environment variable template is provided as:**
+~~~
+AI-Resume-Analyzer/
+├── backend/
+│   ├── server.js
+│   ├── .env.example
+│   └── uploads/              # Created locally; ignored by Git
+├── frontend/
+│   └── src/
+├── package.json
+└── README.md
+~~~
 
-backend/.env.example
+## Useful commands
 
+| Command | Purpose |
+| --- | --- |
+| npm run dev | Start frontend and backend together |
+| npm run install:all | Install frontend and backend dependencies |
+| npm --prefix frontend run build | Create a production frontend build |
+| npm --prefix frontend run lint | Run frontend lint checks |
 
-**🚀 Deployment**
+## Before pushing to GitHub
 
-  - **Frontend:** Vercel
-    
-  - **Backend:** Render
-    
-  - **Database:** Neon PostgreSQL
+Check the files that will be committed:
 
-The production frontend communicates with the deployed backend through the Render API.
+~~~
+git status
+~~~
 
+Do not commit:
 
-**🎯 Project Goal**
+- **backend/.env** or any API keys/passwords
+- **backend/uploads/** because it can contain private resumes
+- **node_modules/**
 
-ResumeAI was built to demonstrate how AI, full-stack development, PDF processing, and database technologies can be combined to solve a practical career-related problem.
+These paths are already covered by the repository's **.gitignore**. Review **git status** before every push, especially after testing with real resumes.
 
+## Privacy and deployment note
 
+Resumes contain personal information. This project is intended for local development and demonstration. Before deploying it publicly, add authentication, access controls, secure file storage, HTTPS, retention/deletion policies, and an appropriate privacy notice.
 
+## License
+
+Add a license before publishing or reusing the project outside your personal work.
